@@ -1,10 +1,7 @@
 import { useState } from "react";
-import Square from "./Square";
 import BoardRow from "./BoardRow";
 import "./App.css";
 import "./styles.css";
-
-let resetCounter = 0;
 
 export default function App() {
   const [turn, setTurn] = useState("X");
