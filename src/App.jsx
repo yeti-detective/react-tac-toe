@@ -1,26 +1,29 @@
 import { useState } from "react";
-import CodeNationLogo from "./CodeNationLogo";
-import ReactLogo from "./ReactLogo";
+import Square from "./Square";
+import BoardRow from "./BoardRow";
 import "./App.css";
 import "./styles.css";
 
+let resetCounter = 0;
+
 export default function App() {
-  const [count, setCount] = useState(0);
+  const [turn, setTurn] = useState("X");
+  const [reset, setReset] = useState(0)
+
+  const changeValue = () => {
+    if (turn === "X") {
+      setTurn("O");
+    } else {
+      setTurn("X");
+    }
+  };
 
   return (
-    <>
-      <h2>
-        <CodeNationLogo />
-        Go to the{" "}
-        <a href="https://react.dev/learn/tutorial-tic-tac-toe" target="_blank">
-          tutorial
-        </a>
-        <ReactLogo />
-      </h2>
-      <ul>
-        <li>We don't need to do the setup steps</li>
-        <li>You're welcome</li>
-      </ul>
-    </>
+    <div onClick={changeValue}>
+      <BoardRow turn={turn} reset={reset} />
+      <BoardRow turn={turn} reset={reset} />
+      <BoardRow turn={turn} reset={reset} />
+      <button onClick={() => {setReset(reset + 1)}}>Reset</button>
+    </div>
   );
 }
