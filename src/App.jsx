@@ -1,4 +1,5 @@
 import { useState } from "react";
+import CodeNationLogo from "./CodeNationLogo";
 import ReactLogo from "./ReactLogo";
 import "./App.css";
 import "./styles.css";
@@ -9,7 +10,7 @@ export default function App() {
   return (
     <>
       <h2>
-        <ReactLogo />
+        <CodeNationLogo />
         Go to the{" "}
         <a href="https://react.dev/learn/tutorial-tic-tac-toe" target="_blank">
           tutorial
@@ -18,6 +19,7 @@ export default function App() {
       </h2>
       <ul>
         <li>We don't need to do the setup steps</li>
+        <li>You're welcome</li>
       </ul>
     </>
   );

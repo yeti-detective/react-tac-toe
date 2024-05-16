@@ -7,10 +7,15 @@
 
 .logo {
   height: 1em;
+  margin: 0.5 em;
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+ul {
+  text-align: start;
 }
